@@ -31,8 +31,7 @@ function Movies() {
   }, []);
 
   const handleChange = event => {
-    setQuery(event.target.value);
-    setSearchParams(`query=${event.target.value}`);
+    setQuery(event.target.value);    
   };
 
   const handleSubmit = async event => {
@@ -45,6 +44,7 @@ function Movies() {
       const data = await response.json();
       setResults(data.results);
       setIsLoading(false);
+      setSearchParams(`query=${query}`);
     } catch (error) {
       console.error('Error searching for movie:', error);
       setIsLoading(false);
