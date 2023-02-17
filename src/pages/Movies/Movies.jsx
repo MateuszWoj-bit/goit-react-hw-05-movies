@@ -67,8 +67,10 @@ function Movies() {
           {results.map(result => (
             <li key={result.id}>
               <Link
-                to={`/movies/${result.id}`}
-                state={{ from: `/movies?${searchParams}` }}
+                to={`/goit-react-hw-05-movies/movies/${result.id}`}
+                state={{
+                  from: `/goit-react-hw-05-movies/movies?${searchParams}`,
+                }}
               >
                 {result.title}
               </Link>

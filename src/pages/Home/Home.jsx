@@ -29,7 +29,10 @@ const Home = () => {
       <ul>
         {trendingMovies.map(movie => (
           <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+            <Link
+              to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+              state={{ from: location }}
+            >
               {movie.title || movie.name}
             </Link>
           </li>

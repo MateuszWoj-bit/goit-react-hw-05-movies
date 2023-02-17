@@ -67,13 +67,16 @@ function MovieDetails() {
       />
       <ul>
         <li>
-          <Link to={`/movies/${movieId}/cast`} state={{ from: backLinkHref }}>
+          <Link
+            to={`/goit-react-hw-05-movies/movies/${movieId}/cast`}
+            state={{ from: backLinkHref }}
+          >
             View Cast
           </Link>
         </li>
         <li>
           <Link
-            to={`/movies/${movieId}/reviews`}
+            to={`/goit-react-hw-05-movies/movies/${movieId}/reviews`}
             state={{ from: backLinkHref }}
           >
             View Reviews
