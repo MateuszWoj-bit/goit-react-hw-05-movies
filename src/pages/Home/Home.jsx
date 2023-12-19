@@ -68,13 +68,13 @@ const Home = () => {
       <h1>Trending TV Today</h1>
       {isLoading && <Loader />}
       <ul>
-        {trendingTV.map(movie => (
-          <li key={movie.id}>
+        {trendingTV.map(tvshow => (
+          <li key={tvshow.id}>
             <Link
-              to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+              to={`/goit-react-hw-05-movies/tv/${tvshow.id}`}
               state={{ from: location }}
             >
-              {movie.title || movie.name}
+              {tvshow.title || tvshow.name}
             </Link>
           </li>
         ))}

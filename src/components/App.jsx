@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+import TVShowDetails from 'pages/TvshowDetails/TvshowDetails';
 
 const Home = lazy(() => import('../pages/Home/Home'));
 const Movies = lazy(() => import('../pages/Movies/Movies'));
@@ -33,6 +34,10 @@ export const App = () => {
               element={<Providers />}
             />
           </Route>
+          <Route
+            path="/goit-react-hw-05-movies/tv/:showId"
+            element={<TVShowDetails />}
+          ></Route>
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
